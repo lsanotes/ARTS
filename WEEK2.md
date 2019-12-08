@@ -36,6 +36,4 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/i
 
 [http://www.brendangregg.com/ebpf.html](http://www.brendangregg.com/ebpf.html)
 
-![](file://C:\Users\lsano\AppData\Roaming\marktext\images\2019-12-01-21-14-48-image.png)
-
 工作久了就会遇到各种奇葩的问题，这些问题的根源并不在应用框架层面，需要深入到系统底层去找。这时候一个趁手的工具就非常的重要的，你总不想手调内核代码吧？估计很多应用开发工程师也没有这个时间去学习和掌握内核调试技术。但是 BPF 框架还是值得去研究一下的，无论是 IO 还是 网络层面的问题，掌握这个利器，什么问题都能给他查的明明白白。
