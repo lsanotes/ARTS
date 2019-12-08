@@ -9,7 +9,22 @@
 贴个虽然答案正确，但是超时的算法。后面会改进下通过测试。
 
 ```kotlin
-class Solution {    fun smallestDivisor(nums: IntArray, threshold: Int): Int {        var divisor = 1        while (divisor > 0) {            var sum = 0            for (i in nums) {                sum += kotlin.math.ceil((i * 1.0) / divisor).toInt()            }            if(sum <= threshold) {                break            }            divisor++        }        return divisor    }}
+class Solution {
+    fun smallestDivisor(nums: IntArray, threshold: Int): Int {
+        var divisor = 1
+        while (divisor > 0) {
+            var sum = 0
+            for (i in nums) {
+                sum += kotlin.math.ceil((i * 1.0) / divisor).toInt()
+            }
+            if(sum <= threshold) {
+                break
+            }
+            divisor++
+        }
+        return divisor
+    }
+}
 ```
 
 ### Review
@@ -21,6 +36,8 @@ class Solution {    fun smallestDivisor(nums: IntArray, threshold: Int): Int {  
 下面是 SAP 开发者 [Gaurav Gupta](https://www.linkedin.com/in/gaurav-gupta-2437aa36/?originalSubdomain=in)去年十月份在 All Things Open 大会上的[发言](https://youtu.be/ug3lYZdN0Bk) 和 [PPT]([https://docs.google.com/presentation/d/1tnhlVqddPQ7wvhxp0_YiqCrowjB29RqV3sK2U7dKPug/edit#slide=id.g2f9bf84c2d_2_79](https://docs.google.com/presentation/d/1tnhlVqddPQ7wvhxp0_YiqCrowjB29RqV3sK2U7dKPug/edit#slide=id.g2f9bf84c2d_2_79))。
 
 [https://docs.google.com/presentation/d/1tnhlVqddPQ7wvhxp0_YiqCrowjB29RqV3sK2U7dKPug/edit#slide=id.g2f9bf84c2d_2_79
+
+
 
 ### Tips
 
@@ -35,5 +52,6 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/i
 ### Share
 
 [http://www.brendangregg.com/ebpf.html](http://www.brendangregg.com/ebpf.html)
+
 
 工作久了就会遇到各种奇葩的问题，这些问题的根源并不在应用框架层面，需要深入到系统底层去找。这时候一个趁手的工具就非常的重要的，你总不想手调内核代码吧？估计很多应用开发工程师也没有这个时间去学习和掌握内核调试技术。但是 BPF 框架还是值得去研究一下的，无论是 IO 还是 网络层面的问题，掌握这个利器，什么问题都能给他查的明明白白。
